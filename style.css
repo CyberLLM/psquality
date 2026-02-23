@@ -570,6 +570,28 @@ p:last-child { margin-bottom: 0; }
 }
 .form-legal a:hover { color: var(--copper-light); }
 
+/* Contact CTA (Tally popup replacement for form) */
+.contact__cta-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 3rem;
+  border: 1px solid rgba(184, 118, 58, 0.25);
+  background: rgba(30, 27, 24, 0.45);
+}
+.contact__cta-wrap p {
+  font-size: 1.05rem;
+  color: rgba(240, 232, 218, 0.78);
+  line-height: 1.75;
+  margin: 0;
+}
+.contact__cta-wrap .btn {
+  align-self: stretch;
+  text-align: center;
+}
+
 /* ============================================================
    FOOTER
 ============================================================ */
