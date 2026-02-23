@@ -326,5 +326,46 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <!-- PS Quality Chat Widget -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --chat--toggle--background: #b8763a !important;
+      --chat--toggle--hover--background: #a66830 !important;
+      --chat--toggle--active--background: #955c28 !important;
+      --chat--color--primary: #b8763a !important;
+      --chat--color--primary-shade-50: #a66830 !important;
+      --chat--header--background: #1e1b18 !important;
+      --chat--header--color: #f0e8da !important;
+      --chat--message--bot--background: #2a2520 !important;
+      --chat--message--bot--color: #f0e8da !important;
+    }
+  </style>
+  <script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+    createChat({
+      webhookUrl: 'https://marek4321.app.n8n.cloud/webhook/f8a0ca75-99dd-42b8-92df-b7c2bac11567/chat',
+      mode: 'window',
+      chatInputKey: 'chatInput',
+      chatSessionKey: 'sessionId',
+      initialMessages: [
+        'Hi there! 👋',
+        'I\'m the PS Quality building advisor. How can I help you with your renovation or building project today?'
+      ],
+      i18n: {
+        en: {
+          title: 'PS Quality Advisor',
+          subtitle: 'Building & Decorating Services – Kent',
+          inputPlaceholder: 'Ask about your project...',
+          getStarted: 'Start Chat',
+          closeButtonTooltip: 'Close',
+        }
+      }
+    });
+  </script>
 </body>
 </html>
